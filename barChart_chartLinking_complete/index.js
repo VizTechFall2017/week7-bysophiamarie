@@ -77,9 +77,10 @@ d3.csv('./countryData_topten.csv', function(dataIn){
 //without adding more circles each time.
 function drawPoints(pointData){
 
-    scaleX.domain(pointData.map(function(d){return d.countryCode;}));
-    scaleY.domain([0, d3.max(pointData.map(function(d){return +d.totalPop}))]);
-    scaleY2.domain([0, d3.max(pointData.map(function(d){return +d.caloriesPerCap}))]);
+    scaleX.domain(pointData.map(function(d){return d.Week7_PS01_HouseRegion.csv;}));
+    scaleX2.domain(pointData.map(function(d){return d.Week7_PS01_HouseCharacters.csv;}));
+    scaleY.domain([0, d3.max(pointData.map(function(d){return +d.Region}))]);
+    scaleY2.domain([0, d3.max(pointData.map(function(d){return +d.House}))]);
 
     d3.selectAll('.xaxis')
         .call(d3.axisBottom(scaleX));
