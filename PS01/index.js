@@ -121,13 +121,23 @@ function drawPoints(pointData){
         .on('mouseover', function(d) {
           d3.select (this) .attr("fill", "#004d4d")
 
+
           var selection = d3.select (this).attr("class")
 
           svg2.selectAll("." + selection).attr("fill", "#642a34");
 
 
 
-})};
+
+})
+
+      .on('mouseout', function(d) {
+        d3.select (this) .attr("fill","slategray")
+        var selection = d3.select (this).attr("class")
+
+        svg2.selectAll("." + selection).attr("fill","slategray");
+      })
+};
 
 
 
